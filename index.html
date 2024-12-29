@@ -7,8 +7,8 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Set the date and time for the redirection
-            const redirectTime = new Date('2024-12-30T01:10:00');
-            const currentTime = new Date();
+            const redirectTime = new Date('2024-12-30T01:10:00').getTime();
+            const currentTime = new Date().getTime();
 
             // Define the URLs to redirect to
             const firstLink = "https://music.youtube.com/watch?v=GktOOUZA7Cw&si=5YupfxxrxWn7vMwe";
