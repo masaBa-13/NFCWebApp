@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set the date and time for the redirection
+            const redirectTime = new Date('2024-12-28T13:50:00');
+            const currentTime = new Date();
+
+            // Define the URLs to redirect to
+            const firstLink = "https://music.youtube.com/watch?v=GktOOUZA7Cw&si=5YupfxxrxWn7vMwe";
+            const secondLink = "https://music.youtube.com/watch?v=DiTd771WumE&si=UqB10BVhw2mCJ0JD";
+
+            // Redirect based on the current time
+            if (currentTime < redirectTime) {
+                window.location.href = firstLink;
+            } else {
+                window.location.href = secondLink;
+            }
+        });
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
