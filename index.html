@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&family=Playwrite+CU:wght@100..400&family=Train+One&display=swap" rel="stylesheet">
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Set the date and time for the redirection
@@ -26,6 +30,13 @@
                 console.log("Redirecting to secondLink");
                 window.location.href = secondLink;
             }
+            
+            // Delay showing the body content by 1 second
+            const bodyContent = document.querySelector('body');
+            bodyContent.style.visibility = 'hidden';
+            setTimeout(() => {
+                bodyContent.style.visibility = 'visible';
+            }, 1000);
         });
     </script>
 </head>
