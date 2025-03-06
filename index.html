@@ -1,47 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&family=Playwrite+CU:wght@100..400&family=Train+One&display=swap" rel="stylesheet">
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Set the date and time for the redirection
-            const redirectTime = new Date('2024-12-30T01:25:00').getTime();
-            const currentTime = new Date().getTime();
-
-            // Define the URLs to redirect to
-            const firstLink = "https://music.youtube.com/watch?v=GktOOUZA7Cw&si=5YupfxxrxWn7vMwe";
-            const secondLink = "https://music.youtube.com/watch?v=DiTd771WumE&si=UqB10BVhw2mCJ0JD";
-
-            // Debugging output
-            console.log("Current Time:", currentTime);
-            console.log("Redirect Time:", redirectTime);
-
-            // Redirect based on the current time
-            if (currentTime < redirectTime) {
-                console.log("Redirecting to firstLink");
-                window.location.href = firstLink;
-            } else {
-                console.log("Redirecting to secondLink");
-                window.location.href = secondLink;
-            }
-            
-            // Delay showing the body content by 1 second
-            const bodyContent = document.querySelector('body');
-            bodyContent.style.visibility = 'hidden';
-            setTimeout(() => {
-                bodyContent.style.visibility = 'visible';
-            }, 1000);
-        });
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&family=Playwrite+CU:wght@100..400&family=Train+One&display=swap" rel="stylesheet">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 使用する全リンクを配列に格納
+      const links = [
+        "https://music.youtube.com/watch?v=Ra9M6ZgT8k&si=ZwoPGceIBP8-YW4I",
+        "https://music.youtube.com/watch?v=WPRgJTGauhU&si=ZkEplfPskYqgsMSP",
+        "https://music.youtube.com/watch?v=kJa1U3MEv1I&si=rjVg7ArhEFTxH9_6",
+        "https://music.youtube.com/watch?v=gTePfOIDLao&si=5lkKaz0pfuyWKFah",
+        "https://music.youtube.com/watch?v=Hp9Z5TP1WfA&si=BfMEq_C1dKCtCu1W",
+        "https://music.youtube.com/watch?v=ItrYS7Rf2Mo&si=VLCOPsPWFyKy9ZR"
+      ];
+      
+      // リンクをランダムに選択
+      const chosenLink = links[Math.floor(Math.random() * links.length)];
+      console.log("選ばれたリンク:", chosenLink);
+      
+      // ページ本文を1秒間非表示にしてからリダイレクト（ちらつきを防ぐため）
+      const bodyContent = document.querySelector('body');
+      bodyContent.style.visibility = 'hidden';
+      setTimeout(() => {
+        bodyContent.style.visibility = 'visible';
+      }, 1000);
+      
+      // 選ばれたリンクにリダイレクト
+      window.location.href = chosenLink;
+    });
+  </script>
 </head>
 <body>
-    <p>このページにはもうなにもないよ～</p>
-    <p>上手くリンク開かなかったらもう一回シールを当ててみて</p>
+  <p>このページにはもうなにもないよ～</p>
+  <p>上手くリンク開かなかったらもう一回シールを当ててみて</p>
 </body>
 </html>
